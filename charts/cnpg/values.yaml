@@ -52,7 +52,7 @@ bootstrap:
     owner: cnpg
     localeCollate: 'en_US'
     localeCType: 'en_US'
-    encoding: 'LATIN1'
+    encoding: 'UTF8'
     postInitSQL:
     postInitApplicationSQLRefs:
       secretRefs:
