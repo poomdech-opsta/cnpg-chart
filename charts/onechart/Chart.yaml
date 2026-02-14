@@ -23,5 +23,5 @@ dependencies:
     repository: file://../common
 
   - name: cnpg
-    version: 1.0.0
+    version: 0.1.0
     repository: file://../cnpg

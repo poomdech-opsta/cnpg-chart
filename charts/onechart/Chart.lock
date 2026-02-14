@@ -2,5 +2,8 @@ dependencies:
 - name: common
   repository: file://../common
   version: 0.7.0
-digest: sha256:a97ffdc0ab67ba57b6fb03ab3f98bbbc488f0630f2160b75e937c27d19a2fa08
-generated: "2024-09-09T08:36:50.067911383Z"
+- name: cnpg
+  repository: file://../cnpg
+  version: 0.1.0
+digest: sha256:357c818fa6e6662262698bade14d35d65cc742ac65f053c8e6e39e6e29603a52
+generated: "2026-02-14T14:16:17.562796+07:00"
