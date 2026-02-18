@@ -24,12 +24,12 @@ spec:
   enableSuperuserAccess: true
   superuserSecret:
     name: {{ printf "%s-cnpg-admin-creds" .Release.Name | trunc 63 | trimSuffix "-" | quote }}
-  {{- end }}
+  {{ end }}
 
   {{- with .Values.cluster.resources }}
   resources:
     {{- toYaml . | nindent 4 }}
-  {{- end }}
+  {{ end }}
 
   storage:
     size: {{ .Values.cluster.storage.size | quote }}
@@ -57,7 +57,7 @@ spec:
         compression: {{ $bos.compression.data | quote }}
       wal:
         compression: {{ $bos.compression.wal | quote }}
-  {{- end }}
+  {{ end }}
 
   {{- if .Values.bootstrap.enabled }}
   bootstrap:
