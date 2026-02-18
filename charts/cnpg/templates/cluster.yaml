@@ -10,7 +10,7 @@
 
 {{- if and $backup.enabled (not $s3SecretName) -}}
 {{- fail "backup.enabled=true but S3 secret name resolved empty (unexpected)" -}}
-{{- end -}}
+{{- end }}
 
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
@@ -63,7 +63,7 @@ spec:
   bootstrap:
     initdb:
 {{- toYaml .Values.bootstrap.initdb | nindent 6 }}
-      secretName:
+      secret:
         name: {{ printf "%s-cnpg-app-creds" .Release.Name | trunc 63 | trimSuffix "-" | quote }}
   {{- end }}
-{{- end -}}
+{{- end }}
