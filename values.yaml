@@ -38,23 +38,22 @@ cnpg:
     instances: 3
     storage:
       size: 5Gi
-      storageClass: standard
+      storageClass: external-nfs
     walStorage:
       size: 2Gi
-      storageClass: standard
+      storageClass: external-nfs
 
   postgresAuth:
     username: cnpg
-    password: ch@ngem3#
+    password: P@ssw0rd
 
   backup:
     retentionPolicy: "7d"
     barmanObjectStore:
-      endpointURL: https://seaweed-dso.mea-poc.opsta.in.th/buckets/
+      endpointURL: https://seaweedfs-admin.mea-poc.opsta.in.th/buckets/
       s3Credentials:
         accessKeyValue: admin
-        secretKeyValue: ch@ngem3#
-
+        secretKeyValue: P@ssw0rd
   bootstrap:
     initdb: 
       database: cnpg

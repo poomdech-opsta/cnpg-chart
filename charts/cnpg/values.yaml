@@ -22,8 +22,8 @@ cluster:
 
 postgresAuth:
   create: true
-  username: admin
-  password: P@ssw0rd
+  username: cnpg
+  password: P@ssw0rd123
 
 backup:
   enabled: true
@@ -50,10 +50,4 @@ bootstrap:
   initdb: 
     database: cnpg
     owner: cnpg
-    localeCollate: 'en_US'
-    localeCType: 'en_US'
-    encoding: 'UTF8'
-    postInitSQL:
-    postInitApplicationSQLRefs:
-      secretRefs:
-      configMapRefs:
+

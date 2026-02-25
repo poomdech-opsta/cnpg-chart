@@ -23,7 +23,7 @@ spec:
   {{- if .Values.superuser.enabled }}
   enableSuperuserAccess: true
   superuserSecret:
-    name: {{ printf "%s-cnpg-admin-creds" .Release.Name | trunc 63 | trimSuffix "-" | quote }}
+    name: {{ printf "%s-cnpg-superuser-secret" .Release.Name | trunc 63 | trimSuffix "-" | quote }}
   {{ end }}
 
   {{- with .Values.cluster.resources }}
@@ -62,7 +62,7 @@ spec:
   {{- if .Values.bootstrap.enabled }}
   bootstrap:
     initdb:
-{{- toYaml .Values.bootstrap.initdb | nindent 6 }}
+      {{- toYaml .Values.bootstrap.initdb | nindent 6 }}
       secret:
         name: {{ printf "%s-cnpg-app-creds" .Release.Name | trunc 63 | trimSuffix "-" | quote }}
   {{ end }}
