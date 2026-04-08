@@ -108,8 +108,6 @@ jobs:
         echo "New version will be $NEW_VERSION"
 
         sed -i "s/^\(version:\s*\)$CURRENT_VERSION/\1$NEW_VERSION/" charts/onechart/Chart.yaml
-        sed -i "s/^\(version:\s*\)$CURRENT_VERSION/\1$NEW_VERSION/" charts/cron-job/Chart.yaml
-        sed -i "s/^\(version:\s*\)$CURRENT_VERSION/\1$NEW_VERSION/" charts/static-site/Chart.yaml
 
         sed -i "s/$CURRENT_VERSION/$NEW_VERSION/" README.md
         sed -i "s/$CURRENT_VERSION/$NEW_VERSION/" docs/onechart.md
